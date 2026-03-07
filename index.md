@@ -7,3 +7,11 @@ template: btfv
 Willkommen auf der Dokumentenseite des BTFV e.V.
 
 Hier findest du alle offiziellen Verbandsdokumente als HTML-Version und zum Download als PDF.
+
+## Dokumente
+
+| Dokument | Nummerierung | PDF |
+|---|---|---|
+| [Beispieldokument (§-Nummerierung)](docs/beispiel) | § 1, § 1.1 … | [PDF](/assets/pdf/beispiel.pdf) |
+| [Spielordnung (arabisch)](docs/spielordnung) | 1, 1.1 … | [PDF](/assets/pdf/spielordnung.pdf) |
+| [Satzung (keine Nummerierung)](docs/satzung) | – | [PDF](/assets/pdf/satzung.pdf) |
