@@ -2,7 +2,6 @@
 title: "Satzung"
 subtitle: "des BTFV e.V."
 date: "{{ site.time | date: '%d.%m.%Y' }}"
-template: btfv
 pdf: /assets/pdf/satzung.pdf
 ---
 
