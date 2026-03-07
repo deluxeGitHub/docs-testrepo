@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spielordnung</title>
+    
+    
+    
+    
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Oswald:wght@400;500;600&display=swap" rel="stylesheet">
+        <link rel="icon" type="image/png" href="/docs-testrepo/staging/templates/btfv/images/favicon.png">
+        <link rel="stylesheet" href="/docs-testrepo/staging/templates/shared/web.css">
+        <link rel="stylesheet" href="/docs-testrepo/staging/templates/btfv/web.css">
+    
+</head>
+<body class=" template-btfv">
+    
+        
+<header class="base-hero"></header>
+<script>
+(() => {
+    const initThemeToggle = () => {
+        const root = document.documentElement;
+        const toggle = document.querySelector('[data-theme-toggle]');
+        const icon = document.querySelector('[data-theme-icon]');
+        if (!toggle || !icon) return;
+
+        const renderIcon = (mode) => {
+            if (mode === 'dark') {
+                icon.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M21 14.5A8.5 8.5 0 1 1 9.5 3a7 7 0 0 0 11.5 11.5Z" fill="none" stroke="currentColor" stroke-width="2"/></svg>';
+            } else {
+                icon.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="5" fill="none" stroke="currentColor" stroke-width="2"/><g stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="12" y1="2.5" x2="12" y2="5.5"/><line x1="12" y1="18.5" x2="12" y2="21.5"/><line x1="2.5" y1="12" x2="5.5" y2="12"/><line x1="18.5" y1="12" x2="21.5" y2="12"/><line x1="4.5" y1="4.5" x2="6.8" y2="6.8"/><line x1="17.2" y1="17.2" x2="19.5" y2="19.5"/><line x1="17.2" y1="6.8" x2="19.5" y2="4.5"/><line x1="4.5" y1="19.5" x2="6.8" y2="17.2"/></g></svg>';
+            }
+        };
+
+        const applyTheme = (mode) => {
+            root.setAttribute('data-theme', mode);
+            toggle.setAttribute('aria-pressed', mode === 'dark' ? 'true' : 'false');
+            renderIcon(mode);
+        };
+
+        const stored = localStorage.getItem('base-theme');
+        const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+        if (stored === 'light' || stored === 'dark') {
+            applyTheme(stored);
+        } else if (prefersDark) {
+            applyTheme('dark');
+        } else {
+            applyTheme('light');
+        }
+
+        toggle.addEventListener('click', () => {
+            const next = root.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+            applyTheme(next);
+            localStorage.setItem('base-theme', next);
+        });
+    };
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initThemeToggle);
+    } else {
+        initThemeToggle();
+    }
+})();
+</script>
+
+    
+    
+        <div class="base-doc-heading">
+            <div class="base-doc-heading__top">
+                <div class="base-doc-heading__brand">
+                    <img class="base-doc-logo" src="/docs-testrepo/staging/templates/btfv/images/logo.png" alt="Logo">
+                    <div class="base-doc-titles">
+                        <div class="base-doc-title">Spielordnung</div>
+                        
+                            <div class="base-doc-subtitle">des BTFV e.V.</div>
+                        
+                    </div>
+                </div>
+                <div class="base-doc-actions">
+                    <div class="base-hero__links">
+                        
+                            <a class="base-home-button" href="/docs-testrepo/staging/">Home</a>
+                        
+                        
+                            <a href="/docs-testrepo/staging/assets/pdf/spielordnung.pdf" target="_blank" rel="noopener">PDF</a>
+                        
+                        
+                        <button class="base-theme-toggle" type="button" data-theme-toggle aria-label="Theme wechseln" aria-pressed="false">
+                            <span class="base-theme-toggle__icon" data-theme-icon>
+                                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                                    <circle cx="12" cy="12" r="5" fill="none" stroke="currentColor" stroke-width="2"/>
+                                    <g stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                                        <line x1="12" y1="2.5" x2="12" y2="5.5"/>
+                                        <line x1="12" y1="18.5" x2="12" y2="21.5"/>
+                                        <line x1="2.5" y1="12" x2="5.5" y2="12"/>
+                                        <line x1="18.5" y1="12" x2="21.5" y2="12"/>
+                                        <line x1="4.5" y1="4.5" x2="6.8" y2="6.8"/>
+                                        <line x1="17.2" y1="17.2" x2="19.5" y2="19.5"/>
+                                        <line x1="17.2" y1="6.8" x2="19.5" y2="4.5"/>
+                                        <line x1="4.5" y1="19.5" x2="6.8" y2="17.2"/>
+                                    </g>
+                                </svg>
+                            </span>
+                        </button>
+                    </div>
+                    
+                    
+                    
+                    
+                        <div class="base-doc-date">Stand: 07.03.2026</div>
+                    
+                </div>
+            </div>
+        </div>
+    
+    <div class="wrapper">
+        <ul id="markdown-toc">
+  <li><a href="#allgemeine-bestimmungen" id="markdown-toc-allgemeine-bestimmungen">Allgemeine Bestimmungen</a>    <ul>
+      <li><a href="#zweck-der-spielordnung" id="markdown-toc-zweck-der-spielordnung">Zweck der Spielordnung</a></li>
+      <li><a href="#geltungsbereich" id="markdown-toc-geltungsbereich">Geltungsbereich</a></li>
+    </ul>
+  </li>
+  <li><a href="#spielbetrieb" id="markdown-toc-spielbetrieb">Spielbetrieb</a>    <ul>
+      <li><a href="#ligabetrieb" id="markdown-toc-ligabetrieb">Ligabetrieb</a>        <ul>
+          <li><a href="#auf--und-abstieg" id="markdown-toc-auf--und-abstieg">Auf- und Abstieg</a></li>
+          <li><a href="#spieltermine" id="markdown-toc-spieltermine">Spieltermine</a></li>
+        </ul>
+      </li>
+      <li><a href="#turniere" id="markdown-toc-turniere">Turniere</a></li>
+    </ul>
+  </li>
+  <li><a href="#schiedsrichter" id="markdown-toc-schiedsrichter">Schiedsrichter</a>    <ul>
+      <li><a href="#aufgaben" id="markdown-toc-aufgaben">Aufgaben</a></li>
+      <li><a href="#qualifikation" id="markdown-toc-qualifikation">Qualifikation</a></li>
+    </ul>
+  </li>
+  <li><a href="#schlussbestimmungen" id="markdown-toc-schlussbestimmungen">Schlussbestimmungen</a></li>
+</ul>
+
+<h1 id="allgemeine-bestimmungen">Allgemeine Bestimmungen</h1>
+
+<p>Dieser Abschnitt testet die arabische Nummerierung (1, 1.1, 1.1.1).
+Die Überschriften werden mit Ziffern nummeriert, kein §-Präfix.</p>
+
+<h2 id="zweck-der-spielordnung">Zweck der Spielordnung</h2>
+
+<ol>
+  <li>Die Spielordnung regelt den Spielbetrieb des BTFV e.V.</li>
+  <li>Sie gilt für alle Wettbewerbe, Ligen und Turniere.</li>
+  <li>Änderungen bedürfen der Zustimmung des Vorstands.</li>
+</ol>
+
+<h2 id="geltungsbereich">Geltungsbereich</h2>
+
+<ol>
+  <li>Diese Spielordnung gilt für alle Mitglieder.</li>
+  <li>Sie ist verbindlich für alle Veranstaltungen des Verbands.</li>
+</ol>
+
+<h1 id="spielbetrieb">Spielbetrieb</h1>
+
+<h2 id="ligabetrieb">Ligabetrieb</h2>
+
+<ol>
+  <li>Der Ligabetrieb wird in Divisionen unterteilt.</li>
+  <li>Die Einteilung erfolgt nach Spielstärke und regionalen Gesichtspunkten.</li>
+</ol>
+
+<h3 id="auf--und-abstieg">Auf- und Abstieg</h3>
+
+<ol>
+  <li>Am Ende jeder Saison steigen die letzten zwei Teams einer Division ab.</li>
+  <li>Die ersten zwei Teams der darunterliegenden Division steigen auf.</li>
+</ol>
+
+<h3 id="spieltermine">Spieltermine</h3>
+
+<ol>
+  <li>Spieltermine werden zu Beginn der Saison festgelegt.</li>
+  <li>Verlegungen sind nur in Ausnahmefällen möglich.</li>
+</ol>
+
+<h2 id="turniere">Turniere</h2>
+
+<ol>
+  <li>Der Verband richtet mindestens zwei Turniere pro Jahr aus.</li>
+  <li>Turniere stehen allen Mitgliedern offen.</li>
+</ol>
+
+<h1 id="schiedsrichter">Schiedsrichter</h1>
+
+<h2 id="aufgaben">Aufgaben</h2>
+
+<ol>
+  <li>Schiedsrichter sorgen für die Einhaltung der Spielregeln.</li>
+  <li>Ihre Entscheidungen sind bindend.</li>
+</ol>
+
+<h2 id="qualifikation">Qualifikation</h2>
+
+<ol>
+  <li>Schiedsrichter müssen einen Lehrgang absolvieren.</li>
+  <li>Die Lizenz ist alle zwei Jahre zu erneuern.</li>
+</ol>
+
+<h1 id="schlussbestimmungen">Schlussbestimmungen</h1>
+
+<ol>
+  <li>Diese Spielordnung tritt mit Beschluss des Vorstands in Kraft.</li>
+  <li>Alle früheren Versionen verlieren damit ihre Gültigkeit.</li>
+</ol>
+
+    </div>
+    
+    <!-- Nach oben Button -->
+    <a href="#markdown-toc" id="back-to-top">Nach oben</a>
+
+    <!-- Link-kopiert-Toast -->
+    <div id="base-toast" role="status" aria-live="polite">Link kopiert</div>
+
+    <script>
+        // Script, um den Button bei Scrollen einzublenden
+        const backToTopButton = document.getElementById("back-to-top");
+
+        window.onscroll = function() {
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                backToTopButton.style.display = "block"; // Zeigt den Button nach Scrollen an
+            } else {
+                backToTopButton.style.display = "none"; // Versteckt den Button, wenn man oben ist
+            }
+        };
+    </script>
+
+    <script>
+        const baseSlugify = (text) => text.toLowerCase()
+            .replace(/[^\w\s-]/g, "")
+            .trim()
+            .replace(/\s+/g, "-");
+
+        const baseCopyText = async (text) => {
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+                await navigator.clipboard.writeText(text);
+                return true;
+            }
+            const temp = document.createElement("textarea");
+            temp.value = text;
+            temp.setAttribute("readonly", "");
+            temp.style.position = "absolute";
+            temp.style.left = "-9999px";
+            document.body.appendChild(temp);
+            temp.select();
+            const success = document.execCommand("copy");
+            document.body.removeChild(temp);
+            return success;
+        };
+
+        let toastTimer = null;
+        const showCopyToast = () => {
+            const toast = document.getElementById("base-toast");
+            if (!toast) return;
+            clearTimeout(toastTimer);
+            toast.classList.add("base-toast--visible");
+            toastTimer = setTimeout(() => toast.classList.remove("base-toast--visible"), 2000);
+        };
+
+        const initHeadingLinks = () => {
+            const wrapper = document.querySelector(".wrapper");
+            if (!wrapper) return;
+            const headings = wrapper.querySelectorAll("h1, h2, h3, h4");
+
+            headings.forEach((heading) => {
+                if (heading.querySelector(".base-heading-link")) return;
+                let id = heading.getAttribute("id");
+                if (!id) {
+                    id = baseSlugify(heading.textContent || "section");
+                    let unique = id;
+                    let counter = 2;
+                    while (document.getElementById(unique)) {
+                        unique = `${id}-${counter++}`;
+                    }
+                    heading.setAttribute("id", unique);
+                }
+
+                const link = document.createElement("a");
+                link.className = "base-heading-link";
+                link.href = `#${id}`;
+                link.setAttribute("aria-label", "Link kopieren");
+                link.innerHTML = "<svg viewBox=\"0 0 24 24\" aria-hidden=\"true\" focusable=\"false\"><path d=\"M10.5 13.5l3-3\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\"/><path d=\"M7 17a4 4 0 0 1 0-5.66l2.34-2.34a4 4 0 0 1 5.66 0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\"/><path d=\"M17 7a4 4 0 0 1 0 5.66l-2.34 2.34a4 4 0 0 1-5.66 0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>";
+
+                link.addEventListener("click", async (event) => {
+                    event.preventDefault();
+                    const url = `${window.location.origin}${window.location.pathname}#${id}`;
+                    await baseCopyText(url);
+                    history.replaceState(null, "", `#${id}`);
+                    showCopyToast();
+                });
+
+                heading.appendChild(link);
+            });
+        };
+
+        if (document.readyState === "loading") {
+            document.addEventListener("DOMContentLoaded", initHeadingLinks);
+        } else {
+            initHeadingLinks();
+        }
+    </script>
+</body>
+</html>
+

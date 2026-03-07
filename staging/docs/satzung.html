@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Satzung</title>
+    
+    
+    
+    
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Oswald:wght@400;500;600&display=swap" rel="stylesheet">
+        <link rel="icon" type="image/png" href="/docs-testrepo/staging/templates/btfv/images/favicon.png">
+        <link rel="stylesheet" href="/docs-testrepo/staging/templates/shared/web.css">
+        <link rel="stylesheet" href="/docs-testrepo/staging/templates/btfv/web.css">
+    
+</head>
+<body class=" template-btfv">
+    
+        
+<header class="base-hero"></header>
+<script>
+(() => {
+    const initThemeToggle = () => {
+        const root = document.documentElement;
+        const toggle = document.querySelector('[data-theme-toggle]');
+        const icon = document.querySelector('[data-theme-icon]');
+        if (!toggle || !icon) return;
+
+        const renderIcon = (mode) => {
+            if (mode === 'dark') {
+                icon.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M21 14.5A8.5 8.5 0 1 1 9.5 3a7 7 0 0 0 11.5 11.5Z" fill="none" stroke="currentColor" stroke-width="2"/></svg>';
+            } else {
+                icon.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="5" fill="none" stroke="currentColor" stroke-width="2"/><g stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="12" y1="2.5" x2="12" y2="5.5"/><line x1="12" y1="18.5" x2="12" y2="21.5"/><line x1="2.5" y1="12" x2="5.5" y2="12"/><line x1="18.5" y1="12" x2="21.5" y2="12"/><line x1="4.5" y1="4.5" x2="6.8" y2="6.8"/><line x1="17.2" y1="17.2" x2="19.5" y2="19.5"/><line x1="17.2" y1="6.8" x2="19.5" y2="4.5"/><line x1="4.5" y1="19.5" x2="6.8" y2="17.2"/></g></svg>';
+            }
+        };
+
+        const applyTheme = (mode) => {
+            root.setAttribute('data-theme', mode);
+            toggle.setAttribute('aria-pressed', mode === 'dark' ? 'true' : 'false');
+            renderIcon(mode);
+        };
+
+        const stored = localStorage.getItem('base-theme');
+        const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+        if (stored === 'light' || stored === 'dark') {
+            applyTheme(stored);
+        } else if (prefersDark) {
+            applyTheme('dark');
+        } else {
+            applyTheme('light');
+        }
+
+        toggle.addEventListener('click', () => {
+            const next = root.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+            applyTheme(next);
+            localStorage.setItem('base-theme', next);
+        });
+    };
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initThemeToggle);
+    } else {
+        initThemeToggle();
+    }
+})();
+</script>
+
+    
+    
+        <div class="base-doc-heading">
+            <div class="base-doc-heading__top">
+                <div class="base-doc-heading__brand">
+                    <img class="base-doc-logo" src="/docs-testrepo/staging/templates/btfv/images/logo.png" alt="Logo">
+                    <div class="base-doc-titles">
+                        <div class="base-doc-title">Satzung</div>
+                        
+                            <div class="base-doc-subtitle">des BTFV e.V.</div>
+                        
+                    </div>
+                </div>
+                <div class="base-doc-actions">
+                    <div class="base-hero__links">
+                        
+                            <a class="base-home-button" href="/docs-testrepo/staging/">Home</a>
+                        
+                        
+                            <a href="/docs-testrepo/staging/assets/pdf/satzung.pdf" target="_blank" rel="noopener">PDF</a>
+                        
+                        
+                        <button class="base-theme-toggle" type="button" data-theme-toggle aria-label="Theme wechseln" aria-pressed="false">
+                            <span class="base-theme-toggle__icon" data-theme-icon>
+                                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                                    <circle cx="12" cy="12" r="5" fill="none" stroke="currentColor" stroke-width="2"/>
+                                    <g stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                                        <line x1="12" y1="2.5" x2="12" y2="5.5"/>
+                                        <line x1="12" y1="18.5" x2="12" y2="21.5"/>
+                                        <line x1="2.5" y1="12" x2="5.5" y2="12"/>
+                                        <line x1="18.5" y1="12" x2="21.5" y2="12"/>
+                                        <line x1="4.5" y1="4.5" x2="6.8" y2="6.8"/>
+                                        <line x1="17.2" y1="17.2" x2="19.5" y2="19.5"/>
+                                        <line x1="17.2" y1="6.8" x2="19.5" y2="4.5"/>
+                                        <line x1="4.5" y1="19.5" x2="6.8" y2="17.2"/>
+                                    </g>
+                                </svg>
+                            </span>
+                        </button>
+                    </div>
+                    
+                    
+                    
+                    
+                        <div class="base-doc-date">Stand: 07.03.2026</div>
+                    
+                </div>
+            </div>
+        </div>
+    
+    <div class="wrapper">
+        <ul id="markdown-toc">
+  <li><a href="#name-sitz-und-zweck" id="markdown-toc-name-sitz-und-zweck">Name, Sitz und Zweck</a>    <ul>
+      <li><a href="#name-und-sitz" id="markdown-toc-name-und-sitz">Name und Sitz</a></li>
+      <li><a href="#vereinszweck" id="markdown-toc-vereinszweck">Vereinszweck</a></li>
+    </ul>
+  </li>
+  <li><a href="#mitgliedschaft" id="markdown-toc-mitgliedschaft">Mitgliedschaft</a>    <ul>
+      <li><a href="#erwerb-der-mitgliedschaft" id="markdown-toc-erwerb-der-mitgliedschaft">Erwerb der Mitgliedschaft</a></li>
+      <li><a href="#beendigung-der-mitgliedschaft" id="markdown-toc-beendigung-der-mitgliedschaft">Beendigung der Mitgliedschaft</a></li>
+    </ul>
+  </li>
+  <li><a href="#vorstand" id="markdown-toc-vorstand">Vorstand</a>    <ul>
+      <li><a href="#zusammensetzung" id="markdown-toc-zusammensetzung">Zusammensetzung</a></li>
+      <li><a href="#amtszeit" id="markdown-toc-amtszeit">Amtszeit</a></li>
+    </ul>
+  </li>
+  <li><a href="#schlussbestimmungen" id="markdown-toc-schlussbestimmungen">Schlussbestimmungen</a>    <ul>
+      <li><a href="#auflösung" id="markdown-toc-auflösung">Auflösung</a></li>
+      <li><a href="#inkrafttreten" id="markdown-toc-inkrafttreten">Inkrafttreten</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="name-sitz-und-zweck">Name, Sitz und Zweck</h1>
+
+<p>Dieser Abschnitt testet Überschriften ohne automatische Nummerierung.
+Die Gliederung erfolgt manuell durch den Inhalt. Test</p>
+
+<h2 id="name-und-sitz">Name und Sitz</h2>
+
+<p>Der Verein führt den Namen „Bayerischer Tischfußball-Verband e.V.” (BTFV)
+und hat seinen Sitz in München.</p>
+
+<h2 id="vereinszweck">Vereinszweck</h2>
+
+<ol>
+  <li>Förderung des Tischfußballsports in Bayern.</li>
+  <li>Durchführung von Wettbewerben und Turnieren.</li>
+  <li>Vertretung der Mitglieder gegenüber nationalen und internationalen Verbänden.</li>
+</ol>
+
+<h1 id="mitgliedschaft">Mitgliedschaft</h1>
+
+<h2 id="erwerb-der-mitgliedschaft">Erwerb der Mitgliedschaft</h2>
+
+<ol>
+  <li>Mitglied kann jede natürliche oder juristische Person werden.</li>
+  <li>Die Aufnahme erfolgt durch schriftlichen Antrag an den Vorstand.</li>
+  <li>Der Vorstand entscheidet über die Aufnahme.</li>
+</ol>
+
+<h2 id="beendigung-der-mitgliedschaft">Beendigung der Mitgliedschaft</h2>
+
+<ol>
+  <li>Die Mitgliedschaft endet durch Austritt, Ausschluss oder Tod.</li>
+  <li>Der Austritt ist schriftlich zum Jahresende zu erklären.</li>
+</ol>
+
+<h1 id="vorstand">Vorstand</h1>
+
+<h2 id="zusammensetzung">Zusammensetzung</h2>
+
+<p>Der Vorstand besteht aus:</p>
+
+<ul>
+  <li>Vorsitzendem</li>
+  <li>Stellvertretendem Vorsitzenden</li>
+  <li>Schatzmeister</li>
+  <li>Schriftführer</li>
+</ul>
+
+<h2 id="amtszeit">Amtszeit</h2>
+
+<ol>
+  <li>Der Vorstand wird für zwei Jahre gewählt.</li>
+  <li>Wiederwahl ist zulässig.</li>
+</ol>
+
+<h1 id="schlussbestimmungen">Schlussbestimmungen</h1>
+
+<h2 id="auflösung">Auflösung</h2>
+
+<ol>
+  <li>Die Auflösung des Vereins kann nur in einer außerordentlichen Mitgliederversammlung beschlossen werden.</li>
+  <li>Bei Auflösung fällt das Vereinsvermögen an eine gemeinnützige Organisation.</li>
+</ol>
+
+<h2 id="inkrafttreten">Inkrafttreten</h2>
+
+<p>Diese Satzung wurde am 01.01.2024 beschlossen und tritt sofort in Kraft.</p>
+
+    </div>
+    
+    <!-- Nach oben Button -->
+    <a href="#markdown-toc" id="back-to-top">Nach oben</a>
+
+    <!-- Link-kopiert-Toast -->
+    <div id="base-toast" role="status" aria-live="polite">Link kopiert</div>
+
+    <script>
+        // Script, um den Button bei Scrollen einzublenden
+        const backToTopButton = document.getElementById("back-to-top");
+
+        window.onscroll = function() {
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                backToTopButton.style.display = "block"; // Zeigt den Button nach Scrollen an
+            } else {
+                backToTopButton.style.display = "none"; // Versteckt den Button, wenn man oben ist
+            }
+        };
+    </script>
+
+    <script>
+        const baseSlugify = (text) => text.toLowerCase()
+            .replace(/[^\w\s-]/g, "")
+            .trim()
+            .replace(/\s+/g, "-");
+
+        const baseCopyText = async (text) => {
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+                await navigator.clipboard.writeText(text);
+                return true;
+            }
+            const temp = document.createElement("textarea");
+            temp.value = text;
+            temp.setAttribute("readonly", "");
+            temp.style.position = "absolute";
+            temp.style.left = "-9999px";
+            document.body.appendChild(temp);
+            temp.select();
+            const success = document.execCommand("copy");
+            document.body.removeChild(temp);
+            return success;
+        };
+
+        let toastTimer = null;
+        const showCopyToast = () => {
+            const toast = document.getElementById("base-toast");
+            if (!toast) return;
+            clearTimeout(toastTimer);
+            toast.classList.add("base-toast--visible");
+            toastTimer = setTimeout(() => toast.classList.remove("base-toast--visible"), 2000);
+        };
+
+        const initHeadingLinks = () => {
+            const wrapper = document.querySelector(".wrapper");
+            if (!wrapper) return;
+            const headings = wrapper.querySelectorAll("h1, h2, h3, h4");
+
+            headings.forEach((heading) => {
+                if (heading.querySelector(".base-heading-link")) return;
+                let id = heading.getAttribute("id");
+                if (!id) {
+                    id = baseSlugify(heading.textContent || "section");
+                    let unique = id;
+                    let counter = 2;
+                    while (document.getElementById(unique)) {
+                        unique = `${id}-${counter++}`;
+                    }
+                    heading.setAttribute("id", unique);
+                }
+
+                const link = document.createElement("a");
+                link.className = "base-heading-link";
+                link.href = `#${id}`;
+                link.setAttribute("aria-label", "Link kopieren");
+                link.innerHTML = "<svg viewBox=\"0 0 24 24\" aria-hidden=\"true\" focusable=\"false\"><path d=\"M10.5 13.5l3-3\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\"/><path d=\"M7 17a4 4 0 0 1 0-5.66l2.34-2.34a4 4 0 0 1 5.66 0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\"/><path d=\"M17 7a4 4 0 0 1 0 5.66l-2.34 2.34a4 4 0 0 1-5.66 0\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>";
+
+                link.addEventListener("click", async (event) => {
+                    event.preventDefault();
+                    const url = `${window.location.origin}${window.location.pathname}#${id}`;
+                    await baseCopyText(url);
+                    history.replaceState(null, "", `#${id}`);
+                    showCopyToast();
+                });
+
+                heading.appendChild(link);
+            });
+        };
+
+        if (document.readyState === "loading") {
+            document.addEventListener("DOMContentLoaded", initHeadingLinks);
+        } else {
+            initHeadingLinks();
+        }
+    </script>
+</body>
+</html>
+
