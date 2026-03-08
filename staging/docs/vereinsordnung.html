@@ -9,10 +9,13 @@
     
     
     
+        <meta name="theme-color" content="#4a4a49">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Oswald:wght@400;500;600&display=swap" rel="stylesheet">
         <link rel="icon" type="image/png" href="/docs-testrepo/staging/templates/meinverein/images/favicon.png">
+        <link rel="apple-touch-icon" href="/docs-testrepo/staging/templates/meinverein/images/logo.png">
+        <link rel="manifest" href="/docs-testrepo/staging/manifest.webmanifest">
         <link rel="stylesheet" href="/docs-testrepo/staging/templates/shared/web.css">
         <link rel="stylesheet" href="/docs-testrepo/staging/templates/meinverein/web.css">
     
@@ -37,10 +40,18 @@
             }
         };
 
+        const updateThemeColor = () => {
+            const meta = document.querySelector('meta[name="theme-color"]');
+            if (!meta) return;
+            const color = getComputedStyle(root).getPropertyValue('--color-header-band-bg').trim();
+            if (color) meta.setAttribute('content', color);
+        };
+
         const applyTheme = (mode) => {
             root.setAttribute('data-theme', mode);
             toggle.setAttribute('aria-pressed', mode === 'dark' ? 'true' : 'false');
             renderIcon(mode);
+            updateThemeColor();
         };
 
         const stored = localStorage.getItem('base-theme');
@@ -112,7 +123,7 @@
                     
                     
                     
-                        <div class="base-doc-date">Stand: 07.03.2026</div>
+                        <div class="base-doc-date">Stand: 08.03.2026</div>
                     
                 </div>
             </div>
