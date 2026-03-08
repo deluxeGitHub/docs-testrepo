@@ -12,7 +12,6 @@ jobs:
     with:
       source_dir: docs
       baseurl: /docs-testrepo
-      framework_ref: development
       staging_branch: staging-test
     permissions:
       contents: write
