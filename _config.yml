@@ -5,10 +5,21 @@ plugins:
   - jekyll-toc
   - jekyll-relative-links
 
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+      template: btfv
+
 relative_links:
   enabled: true
+
+custom_templates:
+  - meinverein
 
 exclude:
   - scripts/
   - temp/
   - framework/
+  - .framework/
