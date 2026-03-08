@@ -1,0 +1,24 @@
+name: Vor Merge auf main prüfen
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Prüfen ob noch development-Referenzen vorhanden sind
+        run: |
+          if grep -q "framework_ref: development" .github/workflows/build.yml; then
+            echo "::error::build.yml enthält noch 'framework_ref: development' – bitte vor dem Merge auf main entfernen."
+            exit 1
+          fi
+          if grep -qE "@development" .github/workflows/build.yml; then
+            echo "::error::build.yml verweist noch auf '@development' – bitte vor dem Merge auf '@main' umstellen."
+            exit 1
+          fi
+          echo "OK – keine development-Referenzen gefunden."

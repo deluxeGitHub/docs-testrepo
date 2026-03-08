@@ -8,10 +8,11 @@ on:
 
 jobs:
   build:
-    uses: deluxeGitHub/md-to-web-and-pdf/.github/workflows/reusable-build.yml@main
+    uses: deluxeGitHub/md-to-web-and-pdf/.github/workflows/reusable-build.yml@development
     with:
       source_dir: docs
       baseurl: /docs-testrepo
+      framework_ref: development
       staging_branch: staging-test
     permissions:
       contents: write
