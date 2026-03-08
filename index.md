@@ -1,5 +1,5 @@
 ---
-title: "Startseite"
+title: "BTFV Docs"
 ---
 
 Willkommen auf der Dokumentenseite des BTFV e.V.
