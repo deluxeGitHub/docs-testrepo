@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Beispieldokument</title>
+    <title>Vereinsordnung</title>
     
     
     
@@ -12,12 +12,12 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Oswald:wght@400;500;600&display=swap" rel="stylesheet">
-        <link rel="icon" type="image/png" href="/docs-testrepo/templates/btfv/images/favicon.png">
+        <link rel="icon" type="image/png" href="/docs-testrepo/templates/meinverein/images/favicon.png">
         <link rel="stylesheet" href="/docs-testrepo/templates/shared/web.css">
-        <link rel="stylesheet" href="/docs-testrepo/templates/btfv/web.css">
+        <link rel="stylesheet" href="/docs-testrepo/templates/meinverein/web.css">
     
 </head>
-<body class="section-prefix template-btfv">
+<body class="section-prefix template-meinverein">
     
         
 <header class="base-hero"></header>
@@ -73,11 +73,11 @@
         <div class="base-doc-heading">
             <div class="base-doc-heading__top">
                 <div class="base-doc-heading__brand">
-                    <img class="base-doc-logo" src="/docs-testrepo/templates/btfv/images/logo.png" alt="Logo">
+                    <img class="base-doc-logo" src="/docs-testrepo/templates/meinverein/images/logo.png" alt="Logo">
                     <div class="base-doc-titles">
-                        <div class="base-doc-title">Beispieldokument</div>
+                        <div class="base-doc-title">Vereinsordnung</div>
                         
-                            <div class="base-doc-subtitle">Muster für neue Dokumente</div>
+                            <div class="base-doc-subtitle">des Meinverein e.V.</div>
                         
                     </div>
                 </div>
@@ -87,7 +87,7 @@
                             <a class="base-home-button" href="/docs-testrepo/">Home</a>
                         
                         
-                            <a href="/docs-testrepo/assets/pdf/beispiel.pdf" target="_blank" rel="noopener">PDF</a>
+                            <a href="/docs-testrepo/assets/pdf/vereinsordnung.pdf" target="_blank" rel="noopener">PDF</a>
                         
                         
                         <button class="base-theme-toggle" type="button" data-theme-toggle aria-label="Theme wechseln" aria-pressed="false">
@@ -125,50 +125,62 @@
       <li><a href="#geltungsbereich" id="markdown-toc-geltungsbereich">Geltungsbereich</a></li>
     </ul>
   </li>
-  <li><a href="#textformatierung" id="markdown-toc-textformatierung">Textformatierung</a>    <ul>
-      <li><a href="#listen" id="markdown-toc-listen">Listen</a></li>
-      <li><a href="#alphabetische-listen" id="markdown-toc-alphabetische-listen">Alphabetische Listen</a></li>
+  <li><a href="#theme-konfiguration" id="markdown-toc-theme-konfiguration">Theme-Konfiguration</a>    <ul>
+      <li><a href="#voraussetzungen" id="markdown-toc-voraussetzungen">Voraussetzungen</a></li>
+      <li><a href="#registrierung" id="markdown-toc-registrierung">Registrierung</a></li>
     </ul>
   </li>
+  <li><a href="#schlussbestimmungen" id="markdown-toc-schlussbestimmungen">Schlussbestimmungen</a></li>
 </ul>
 
 <h1 id="allgemeine-bestimmungen">Allgemeine Bestimmungen</h1>
 
-<p>Dieser Abschnitt zeigt wie ein Dokument mit §-Nummerierung aussieht.</p>
+<p>Dieses Dokument demonstriert das custom Theme <code class="language-plaintext highlighter-rouge">meinverein</code> mit eigenem
+Farbschema (Dunkelgrün), eigenem Logo und eigenem Favicon.</p>
 
 <h2 id="zweck">Zweck</h2>
 
 <ol>
-  <li>Dieses Dokument dient als Vorlage für neue Verbandsdokumente.</li>
-  <li>Es kann direkt kopiert und angepasst werden.</li>
+  <li>Dieses Dokument dient als Beispiel für ein custom Theme.</li>
+  <li>Das Theme liegt im Docs-Repo unter <code class="language-plaintext highlighter-rouge">templates/meinverein/</code>.</li>
+  <li>Es überschreibt kein bestehendes Framework-Theme, sondern ergänzt es.</li>
 </ol>
 
 <h2 id="geltungsbereich">Geltungsbereich</h2>
 
 <ol>
-  <li>Das Dokument gilt für alle Mitglieder des BTFV e.V.</li>
+  <li>Das Custom-Theme gilt nur für dieses Docs-Repo.</li>
+  <li>Andere Repos bleiben davon unberührt.</li>
 </ol>
 
-<h1 id="textformatierung">Textformatierung</h1>
+<h1 id="theme-konfiguration">Theme-Konfiguration</h1>
 
-<p>Text kann <strong>fett</strong>, <em>kursiv</em> oder <code class="language-plaintext highlighter-rouge">inline-code</code> formatiert werden.</p>
+<h2 id="voraussetzungen">Voraussetzungen</h2>
 
-<h2 id="listen">Listen</h2>
+<p>Folgende Dateien müssen im Docs-Repo vorhanden sein:</p>
 
 <ul>
-  <li>Stichpunkt A</li>
-  <li>Stichpunkt B
-    <ul>
-      <li>Unterpunkt B1</li>
-    </ul>
-  </li>
+  <li><code class="language-plaintext highlighter-rouge">templates/meinverein/web.css</code> – CSS-Variablen und Overrides</li>
+  <li><code class="language-plaintext highlighter-rouge">templates/meinverein/pdf-header.tex</code> – LaTeX-Header für PDFs</li>
+  <li><code class="language-plaintext highlighter-rouge">templates/meinverein/images/logo.png</code> – Logo (Header und Titelseite)</li>
+  <li><code class="language-plaintext highlighter-rouge">templates/meinverein/images/favicon.png</code> – Favicon</li>
 </ul>
 
-<h2 id="alphabetische-listen">Alphabetische Listen</h2>
+<h2 id="registrierung">Registrierung</h2>
 
-<ol type="a">
-  <li>Erster Punkt</li>
-  <li>Zweiter Punkt</li>
+<p>In <code class="language-plaintext highlighter-rouge">_config.yml</code> des Docs-Repos eintragen:</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">custom_templates</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="s">meinverein</span>
+</code></pre></div></div>
+
+<p>Danach kann jedes Dokument <code class="language-plaintext highlighter-rouge">template: meinverein</code> im Front Matter verwenden.</p>
+
+<h1 id="schlussbestimmungen">Schlussbestimmungen</h1>
+
+<ol>
+  <li>Das Custom-Theme wird bei jedem Build automatisch verwendet.</li>
+  <li>Logo und Favicon können jederzeit durch eigene Grafiken ersetzt werden.</li>
 </ol>
 
     </div>
