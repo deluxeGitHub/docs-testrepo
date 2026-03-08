@@ -101,18 +101,38 @@ body[class*="template-"] .base-doc-heading {
 body[class*="template-"] .base-doc-heading__top {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 20px;
+    flex-wrap: wrap;
+    gap: 12px 20px;
+}
+
+body[class*="template-"] .base-doc-brand-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    border-bottom: none;
+    color: inherit;
+    flex-shrink: 0;
+}
+
+body[class*="template-"] .base-doc-brand-link:hover {
+    border-bottom: none;
+}
+
+body[class*="template-"] .base-doc-back-icon {
+    display: block;
+    width: 20px;
+    height: 20px;
+    color: var(--color-text-muted);
+    flex-shrink: 0;
+}
+
+body[class*="template-"] .base-doc-sitename {
+    display: none;
 }
 
 body[class*="template-"] .base-doc-titles {
-    min-width: 0;
-}
-
-body[class*="template-"] .base-doc-heading__brand {
-    display: flex;
-    align-items: center;
-    gap: 16px;
+    flex: 1;
     min-width: 0;
 }
 
@@ -355,6 +375,10 @@ body[class*="template-"] #back-to-top:hover {
     background-color: var(--color-brand-contrast);
 }
 
+body:has(#staging-banner) #back-to-top {
+    bottom: 52px;
+}
+
 /* Automatische Nummerierung fuer h1-h4 (nur wenn section_numbering gesetzt) */
 body[class*="template-"].section-arabic,
 body[class*="template-"].section-prefix {
@@ -558,14 +582,58 @@ body[class*="template-"] .base-heading-link svg {
         padding: 16px 12px 28px;
     }
 
-    body[class*="template-"] .base-doc-heading__top {
-        flex-direction: column;
-        align-items: flex-start;
+    body[class*="template-"] .base-doc-brand-link {
+        flex: 1;
     }
 
-    body[class*="template-"] .base-doc-heading__brand {
-        flex-direction: column;
-        align-items: flex-start;
+    body[class*="template-"] .base-doc-back-icon {
+        width: 36px;
+        height: 36px;
+    }
+
+    /* Startseite: Logo groß, Titel inline neben Logo (kein doppelter Seitenname) */
+    body[class*="template-"] .base-doc-heading--home .base-doc-sitename {
+        display: none;
+    }
+
+    body[class*="template-"] .base-doc-heading--home .base-doc-logo {
+        width: 70px;
+    }
+
+    body[class*="template-"] .base-doc-heading--home .base-doc-brand-link {
+        flex: none;
+    }
+
+    body[class*="template-"] .base-doc-heading--home .base-doc-titles {
+        order: unset;
+        width: auto;
+        flex: 1;
+    }
+
+    body[class*="template-"] ul,
+    body[class*="template-"] ol {
+        padding-left: 1rem;
+        list-style-position: inside;
+    }
+
+    body[class*="template-"] .base-doc-sitename {
+        display: block;
+        font-size: 17px;
+        font-weight: 700;
+        color: var(--color-text-primary);
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    body[class*="template-"] .base-doc-logo {
+        width: 36px;
+    }
+
+    body[class*="template-"] .base-doc-titles {
+        order: 10;
+        width: 100%;
+        flex: none;
     }
 
     body[class*="template-"] .base-doc-title {
@@ -573,6 +641,7 @@ body[class*="template-"] .base-heading-link svg {
     }
 
     body[class*="template-"] .base-doc-actions {
+        order: 11;
         align-items: flex-start;
         width: 100%;
     }
