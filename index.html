@@ -2,17 +2,20 @@
 <html lang="de">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Startseite</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>BTFV Docs</title>
     
     
     
     
     
+        <meta name="theme-color" content="#f4f4f2">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Oswald:wght@400;500;600&display=swap" rel="stylesheet">
         <link rel="icon" type="image/png" href="/docs-testrepo/templates/btfv/images/favicon.png">
+        <link rel="apple-touch-icon" href="/docs-testrepo/templates/btfv/images/logo.png">
+        <link rel="manifest" href="/docs-testrepo/manifest.webmanifest">
         <link rel="stylesheet" href="/docs-testrepo/templates/shared/web.css">
         <link rel="stylesheet" href="/docs-testrepo/templates/btfv/web.css">
     
@@ -37,10 +40,18 @@
             }
         };
 
+        const updateThemeColor = () => {
+            const meta = document.querySelector('meta[name="theme-color"]');
+            if (!meta) return;
+            const color = getComputedStyle(root).getPropertyValue('--color-surface-page').trim();
+            if (color) meta.setAttribute('content', color);
+        };
+
         const applyTheme = (mode) => {
             root.setAttribute('data-theme', mode);
             toggle.setAttribute('aria-pressed', mode === 'dark' ? 'true' : 'false');
             renderIcon(mode);
+            updateThemeColor();
         };
 
         const stored = localStorage.getItem('base-theme');
@@ -75,7 +86,7 @@
                 <div class="base-doc-heading__brand">
                     <img class="base-doc-logo" src="/docs-testrepo/templates/btfv/images/logo.png" alt="Logo">
                     <div class="base-doc-titles">
-                        <div class="base-doc-title">Startseite</div>
+                        <div class="base-doc-title">BTFV Docs</div>
                         
                     </div>
                 </div>
@@ -155,6 +166,10 @@
     
     <!-- Nach oben Button -->
     <a href="#markdown-toc" id="back-to-top">Nach oben</a>
+
+    <!-- Staging-Banner -->
+    
+    
 
     <!-- Link-kopiert-Toast -->
     <div id="base-toast" role="status" aria-live="polite">Link kopiert</div>
